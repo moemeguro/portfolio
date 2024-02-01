@@ -1,0 +1,39 @@
+{
+  "name": "github",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "gulp scss",
+    "js": "webpack",
+    "gulp": "NODE_ENV=development gulp",
+    "start": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com//moemeguro/portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.23.9",
+    "@babel/preset-env": "^7.23.9",
+    "autoprefixer": "^10.4.17",
+    "babel-cli": "^6.26.0",
+    "babel-loader": "^9.1.3",
+    "eslint-webpack-plugin": "^4.0.1",
+    "grunt-contrib-uglify": "^5.2.2",
+    "gulp": "^4.0.2",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-postcss": "^9.1.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-uglify": "^3.0.2",
+    "sass": "^1.70.0",
+    "terser-webpack-plugin": "^5.3.10",
+    "webpack": "^5.90.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-stream": "^7.0.0"
+  }
+}
