@@ -3,30 +3,121 @@
 <head>
   <title>portfolio</title>
   <script src="/dist/js/index.js" defer></script>
+  <link rel="stylesheet" href="/dist/css/style.css">
 </head>
 
   <body>
     <header>
-      <nav>
+      <nav class="header">
         <ul>
-          <li>
-            <a>HOME</a>
+          <li class="header__list">
+            <a href="/">HOME</a>
           </li>
-          <li>
-            <a>ABOUT</a>
+          <li class="header__list">
+            <a href="#about">ABOUT</a>
           </li>
-          <li>
-            <a>WORKS</a>
+          <li class="header__list">
+            <a href="#works">WORKS</a>
+          </li>
+          <li class="header__list">
+            <a href="#skills">SKILLS</a>
+          </li>
+          <li class="header__list">
+            <a href="#contact">CONTACT</a>
           </li>
         </ul>
       </nav>
     </header>
-    <section>
-      <h1>ABOUT</h1>
-      <img src="/dist/images/photo1.JPG" alt="">
+    <section id="about" class="c-box about">
+      <div class="image">
+        <div class="">
+          <div>
+            <img src="https://github.com/moemeguro/portfolio/blob/main/dist/images/photo1.JPG?raw=true" alt="" width="80%">
+          </div>
+          <div>
+            <img src="https://github.com/moemeguro/portfolio/blob/main/dist/images/photo2.JPG?raw=true" alt="" width="80%">
+          </div>
+          <div>
+            <img src="https://github.com/moemeguro/portfolio/blob/main/dist/images/photo3.JPG?raw=true" alt="" width="80%">
+          </div>
+        </div>
+      </div>
+      <h1 class="c-title">ABOUT</h1>
+      <div class="c-box__inner about__inner">
+        <h2>Moe Kobayashi (Meguro)</h2>
+        <p>age 31</p>
+        <p>東北出身 / 東京在住</p>
+        <p>独学でweb全般の知識を学習し、web制作会社にて約2年半フロントエンドエンジニアとして勤務しておりました。</p>
+        <p>趣味は登山です。写真は以前アルプスを登った際、祖父が遺したフィルムカメラで撮影したものです。</p>
+      </div>
     </section>
-    <section>
-      <h1>WORKS</h1>
+    <section id="works" class="c-box works">
+      <h1 class="c-title">WORKS</h1>
+      <div class="c-box__inner">
+        <ul>
+          <li>
+            <div class="works__listItem">
+              <p>Tatsuro Sasakii Architects</p>
+              <p><a class="listItem__link" href="https://www.fsimg.jp/design/96/" target="_blank">detail</a></p>
+            </div>
+            <div>
+              <p>開発環境設定 / wordpressテーマ開発 / TOP ABOUTページ実装</p>
+            </div>
+            <p></p>
+          </li>
+          <li>
+            <div class="works__listItem">
+              <p>ARTS&SCIENCE Online store</p>
+              <p><a class="listItem__link" href="https://www.fsimg.jp/design/422/" target="_blank">detail</a></p>
+            </div>
+            <div>
+              <p>shopify テーマカスタマイズ</p>
+            </div>
+            <p></p>
+          </li>
+          <li>
+            <div class="works__listItem">
+              <p>Sable madle 2020 A/W</p>
+              <p><a class="listItem__link" href="https://www.fsimg.jp/design/72/" target="_blank">detail</a></p>
+            </div>
+            <div>
+              <p>ブランドサイト実装</p>
+            </div>
+            <p></p>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section id="skills" class="c-box">
+      <h1 class="c-title">SKILLS</h1>
+      <div class="c-box__inner">
+        <ul>
+          <li>
+            <p>言語</p>
+            <p>HTML / CSS / Dart Sass、Node Sass / JavaScript / PHP </p>
+          </li>
+          <li>
+            <p>開発環境</p>
+            <p>Node.js / gulp / babel / webpack</p>
+          </li>
+          <li>
+            <p>CMS</p>
+            <p>Wordpress（オリジナルテーマ） / Shopify</p>
+          </li>
+          <li>
+            <p>Git</p>
+            <p>Sourcetree</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section id="contact" class="c-box contact">
+      <h1 class="c-title">CONTACT</h1>
+      <div class="c-box__inner">
+        <div class="contact__button">
+          <a class="button__item" href="">MAIL</a>
+        </div>
+      </div>
     </section>
   </body>
 </html>
