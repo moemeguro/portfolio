@@ -29,12 +29,18 @@ gulp.task("scss:dev", () => {
 
 
 // javascriptファイルの圧縮
-gulp.task("compress", () =>
-  gulp
-    .src(["src/js/index.js", "src/js/sub.js"])
-    .pipe(uglify())
-    .pipe(gulp.dest("dist"))
+const webpackConfig = require("./webpack.config");
+const webpack = require("webpack");
+const webpackStream = require('webpack-stream');
+
+gulp.task("webpack", () =>
+  // gulp
+    // .src(["src/js/index.js", "src/js/sub.js"])
+    webpackStream(webpackConfig, webpack)
+    .pipe(gulp.dest("dist/js"))
 );
+
+
 
 // 画像の圧縮
 gulp.task("imagemin", () =>
@@ -50,7 +56,7 @@ gulp.task("imagemin", () =>
 gulp.task('default', gulp.series(
   gulp.parallel(
     'scss:dev',
-    'compress',
+    'webpack',
     'imagemin'
     ), function(done){
       done();

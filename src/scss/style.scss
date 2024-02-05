@@ -1,16 +1,18 @@
 @charset 'UTF-8';
 
+// 変数のテスト
+$fontColor: #5d5d5d;
+
+// メディアクエリ用ブレイクポイント
+$sm: 768px;
+$md: 1025px;
+$lg: 1601px;
 @mixin media($break-point) {
   @media screen and (min-width: $break-point) {
     @content;
   }
 }
 
-// 変数のテスト
-$fontColor: #5d5d5d;
-
-// メディアクエリ用ブレイクポイント
-$md: 768px;
 
 html {
   font-size: 62.5%; // 16px * 62.5% = 10px(= 1rem)
@@ -102,12 +104,6 @@ input[type='submit'] {
   background: transparent; // for Chrome on Android
 }
 
-input[type='email'],
-input[type='text'],
-textarea {
-  -webkit-appearance: none; // for Safari and Chrome on iOS
-}
-
 select {
   appearance: none;
   border: 0;
@@ -133,32 +129,112 @@ body{
 }
 
 .header{
-  display: flex;
-  justify-content: end;
-  margin: 0 10%;
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 80px 52px 40px;
   font-size: 15px;
   line-height: 2;
   letter-spacing: .1em;
   color: $fontColor;
   font-family: YuGothic, sans-serif;
-  @include media($md) {
-    margin: 0 5%;
+  overflow-y: auto;
+  text-align: center;
+  box-sizing: border-box;
+  background: #ddd;
+  z-index: 3;
+  @include media($sm) {
+    max-width: 300px;
+    height: 100%;
+    left: auto;
   }  
 }
+
+.header[aria-hidden=true]{
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .6s ease,visibility 0s .6s; 
+}
+
+.header[aria-hidden=false]{
+  transition: opacity .6s ease;
+}
+
+.header__inner{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: end;
+  z-index: 4;
+  @include media($md) {
+    max-width: 300px;
+    left: auto;
+  }  
+}
+
+
+.header__button {
+  position: relative;
+  margin: 23px 25px 0 0;
+  width: 23px;
+  height: 23px;
+  z-index: 4;
+}
+
+.header__button::after,
+.header__button::before {
+  position: absolute;
+  display: block;
+  content: '';
+  top: 50%;
+  width: 100%;
+  height: 1px;
+  background: #5d5d5d;
+  transition: transform 0.8s ease;
+  .header__inner--transparent & {
+    background: #fff;
+  }
+}
+
+.header__button[aria-expanded='false']::before {
+  transform: translateY(-50%) translateY(5.5px);
+}
+
+.header__button[aria-expanded='false']::after {
+  transform: translateY(-50%) translateY(-5.5px);
+}
+
+.header__button[aria-expanded='true']::before {
+  transform: translateY(-50%) rotate(45deg);
+  background: #5d5d5d;
+}
+
+.header__button[aria-expanded='true']::after {
+  transform: translateY(-50%) rotate(-45deg);
+  background: #5d5d5d;
+}
+
 
 .header ul li::marker{
   content: '';
 }
 
 .header ul{
-  display: flex;
+  // display: flex;
   padding: 0;
 }
 
 .header__list a{
   position: relative;
   display: block;
-  width: 100px;
+  // width: 100px;
   height: 50px;
   line-height: 50px;
   font-family: YuGothic, sans-serif;
@@ -184,7 +260,7 @@ body{
 
 .header__list a:hover{
   &::after{
-    width: 80%;
+    width: 35%;
   }  
 }
 

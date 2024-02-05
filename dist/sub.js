@@ -1,1 +1,1 @@
-function hello(){console.log("hello")}export{hello};
+function hello(){console.log("hello2")}console.log("bb");export{hello};

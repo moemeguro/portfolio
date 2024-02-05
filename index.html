@@ -14,46 +14,51 @@
   <meta property="og:image" content="https://github.com/moemeguro/portfolio/blob/main/dist/images/image.jpg">
   <link rel="icon" type="image/png" href="https://github.com/moemeguro/portfolio/blob/main/dist/images/favicon.ico">
 
-  <script src="https://moemeguro.github.io/portfolio/dist/js/index.js" defer></script>
-  <link rel="stylesheet" href="https://moemeguro.github.io/portfolio/dist/css/style.css">
+  <!-- <script src="https://moemeguro.github.io/portfolio/dist/js/index.js" defer></script>
+  <link rel="stylesheet" href="https://moemeguro.github.io/portfolio/dist/css/style.css"> -->
+  <script src="/dist/js/index.js" defer></script>
+  <link rel="stylesheet" href="/dist/css/style.css">
 </head>
 
   <body>
     <header>
-      <nav class="header">
+      <div class="header__inner">
+        <button id="menu-button" class="header__button" type="button" aria-controls="menu" aria-expanded="false" aria-label="メニュー"></button>
+      </div>
+      <nav id="menu" class="header" aria-hidden="true">
         <ul>
           <li class="header__list">
-            <a href="/">HOME</a>
+            <a class="header__link" href="/">HOME</a>
           </li>
           <li class="header__list">
-            <a href="#about">ABOUT</a>
+            <a class="header__link" href="#about">ABOUT</a>
           </li>
           <li class="header__list">
-            <a href="#works">WORKS</a>
+            <a class="header__link" href="#works">WORKS</a>
           </li>
           <li class="header__list">
-            <a href="#skills">SKILLS</a>
+            <a class="header__link" href="#skills">SKILLS</a>
           </li>
           <li class="header__list">
-            <a href="#contact">CONTACT</a>
+            <a class="header__link" href="#contact">CONTACT</a>
           </li>
         </ul>
       </nav>
     </header>
-    <section id="about" class="c-box about">
-      <div class="image">
-        <div class="">
-          <div>
-            <img src="https://github.com/moemeguro/portfolio/blob/main/dist/images/photo1.JPG?raw=true" alt="" width="80%">
-          </div>
-          <div>
-            <img src="https://github.com/moemeguro/portfolio/blob/main/dist/images/photo2.JPG?raw=true" alt="" width="80%">
-          </div>
-          <div>
-            <img src="https://github.com/moemeguro/portfolio/blob/main/dist/images/photo3.JPG?raw=true" alt="" width="80%">
-          </div>
+    <div class="image">
+      <div class="">
+        <div>
+          <img src="https://github.com/moemeguro/portfolio/blob/main/dist/images/photo1.JPG?raw=true" alt="" width="80%">
+        </div>
+        <div>
+          <img src="https://github.com/moemeguro/portfolio/blob/main/dist/images/photo2.JPG?raw=true" alt="" width="80%">
+        </div>
+        <div>
+          <img src="https://github.com/moemeguro/portfolio/blob/main/dist/images/photo3.JPG?raw=true" alt="" width="80%">
         </div>
       </div>
+    </div>
+    <section id="about" class="c-box about">
       <h1 class="c-title">ABOUT</h1>
       <div class="c-box__inner about__inner">
         <h2>Moe Kobayashi (Meguro)</h2>
