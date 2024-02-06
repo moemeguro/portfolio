@@ -1,6 +1,6 @@
 @charset 'UTF-8';
 
-@import '/node_modules/swiper/swiper-bundle.css';
+@use '../../node_modules/swiper/swiper-bundle.css';
 
 // 変数のテスト
 $fontColor: #5d5d5d;

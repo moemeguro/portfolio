@@ -5,6 +5,3 @@ export default function hello() {
   console.log("hello");
 }
 
-console.log("sub.js");
-
-

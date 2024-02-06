@@ -5,6 +5,7 @@ const uglify = require("gulp-uglify");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const imagemin = require("gulp-imagemin");
+const cleanCss = require("gulp-clean-css");
 
 
 // style.scssをタスクを作成する
@@ -13,7 +14,7 @@ gulp.task("scss:dev", () => {
     gulp
       .src("src/scss/style.scss")
       .pipe(
-        sass({
+        sass.sync({
           outputStyle: "expanded"
         })
       )
@@ -23,6 +24,7 @@ gulp.task("scss:dev", () => {
           grid: 'autoplace',
         }),
       ]))
+      .pipe(cleanCss())
       .pipe(gulp.dest("dist/css"))
   );
 });

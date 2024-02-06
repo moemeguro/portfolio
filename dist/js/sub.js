@@ -16,7 +16,7 @@
   \***********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ hello)\n/* harmony export */ });\n\n\n// export文を使ってhello関数を定義する。\nfunction hello() {\n  console.log(\"hello\");\n}\nconsole.log(\"sub.js\");\n\n//# sourceURL=webpack://github/./src/js/sub.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ hello)\n/* harmony export */ });\n\n\n// export文を使ってhello関数を定義する。\nfunction hello() {\n  console.log(\"hello\");\n}\n\n//# sourceURL=webpack://github/./src/js/sub.js?");
 
 /***/ })
 

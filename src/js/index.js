@@ -3,7 +3,7 @@
 import hello from "./sub.js";
 
 // sub.jsに定義されたJavaScriptを実行する。
-hello();
+// hello();
 
 // メニュー
 const menu = document.getElementById('menu')

@@ -27,6 +27,7 @@
     "eslint-webpack-plugin": "^4.0.1",
     "grunt-contrib-uglify": "^5.2.2",
     "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
     "gulp-imagemin": "^7.1.0",
     "gulp-postcss": "^9.1.0",
     "gulp-sass": "^5.1.0",
