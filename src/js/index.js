@@ -47,3 +47,26 @@ links.forEach((link) => {
     closeMenu();
   })
 })
+
+
+// import Swiper JS
+import Swiper from 'swiper/bundle';
+
+const photoSwiper = new Swiper('.swiper',{
+  loop: true,
+  autoplay: {
+    delay: 1900,
+    disableOnInteraction: false,
+  },
+  effect: 'fade',
+  speed: 1500,
+   pagination: {
+    el: '.swiper-pagination',
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  }
+});
+
+

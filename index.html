@@ -14,15 +14,19 @@
   <meta property="og:image" content="https://github.com/moemeguro/portfolio/blob/main/dist/images/image.jpg">
   <link rel="icon" type="image/png" href="https://github.com/moemeguro/portfolio/blob/main/dist/images/favicon.ico">
 
+<!-- 
   <script src="https://moemeguro.github.io/portfolio/dist/js/index.js" defer></script>
-  <link rel="stylesheet" href="https://moemeguro.github.io/portfolio/dist/css/style.css">
-  <!-- <script src="/dist/js/index.js" defer></script> -->
-  <!-- <link rel="stylesheet" href="/dist/css/style.css"> -->
+  <link rel="stylesheet" href="https://moemeguro.github.io/portfolio/dist/css/style.css"> -->
+  <script src="/dist/js/index.js" defer></script>
+  <link rel="stylesheet" href="/dist/css/style.css">
 </head>
 
   <body>
     <header>
       <div class="header__inner">
+        <div class="header__logo">
+          <p>moe kobayashi</p>
+        </div>
         <button id="menu-button" class="header__button" type="button" aria-controls="menu" aria-expanded="false" aria-label="メニュー"></button>
       </div>
       <nav id="menu" class="header" aria-hidden="true">
@@ -45,19 +49,23 @@
         </ul>
       </nav>
     </header>
-    <div class="image">
-      <div class="">
-        <div>
+    <div class="image swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
           <img src="https://github.com/moemeguro/portfolio/blob/main/dist/images/photo1.JPG?raw=true" alt="" width="80%">
         </div>
-        <div>
+        <div class="swiper-slide">
           <img src="https://github.com/moemeguro/portfolio/blob/main/dist/images/photo2.JPG?raw=true" alt="" width="80%">
         </div>
-        <div>
+        <div class="swiper-slide">
           <img src="https://github.com/moemeguro/portfolio/blob/main/dist/images/photo3.JPG?raw=true" alt="" width="80%">
         </div>
       </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
     </div>
+
     <section id="about" class="c-box about">
       <h1 class="c-title">ABOUT</h1>
       <div class="c-box__inner about__inner">

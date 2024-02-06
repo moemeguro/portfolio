@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import '/node_modules/swiper/swiper-bundle.css';
 html {
   font-size: 62.5%;
   line-height: 1;
@@ -159,20 +160,22 @@ body {
   top: 0;
   left: 0;
   right: 0;
+  padding: 25px;
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
+  align-items: center;
   z-index: 4;
 }
-@media screen and (min-width: 1025px) {
-  .header__inner {
-    max-width: 300px;
-    left: auto;
-  }
+
+.header__logo {
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  color: #5d5d5d;
+  font-family: YuGothic, sans-serif;
 }
 
 .header__button {
   position: relative;
-  margin: 23px 25px 0 0;
   width: 23px;
   height: 23px;
   z-index: 4;
@@ -298,6 +301,12 @@ h2 {
   margin-top: 100px;
 }
 
+.image {
+  margin: 100px auto;
+  width: 80%;
+  max-width: 800px;
+}
+
 .image img {
   width: 100%;
 }
@@ -371,4 +380,50 @@ h2 {
 
 .c-box.contact {
   margin-bottom: 100px;
+}
+
+.swiper-button-prev, .swiper-button-next {
+  top: auto;
+  bottom: 10px;
+}
+
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  margin-top: -5px;
+  border-top: solid 1px #fff;
+  border-right: solid 1px #fff;
+  transform: rotate(45deg);
+  top: 50%;
+  right: -20px;
+}
+
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  margin-top: -5px;
+  border-top: solid 1px #fff;
+  border-right: solid 1px #fff;
+  transform: rotate(225deg);
+  top: 50%;
+  right: -20px;
+}
+
+.swiper-pagination-fraction, .swiper-pagination-custom, .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: 20px;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 10px;
+  width: 5px;
+  height: 5px;
+  background-color: #ddd;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #fff;
 }
