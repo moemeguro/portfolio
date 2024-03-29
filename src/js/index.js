@@ -55,11 +55,11 @@ import Swiper from 'swiper/bundle';
 const photoSwiper = new Swiper('.swiper',{
   loop: true,
   autoplay: {
-    delay: 1900,
+    delay: 6000,
     disableOnInteraction: false,
   },
   effect: 'fade',
-  speed: 1500,
+  speed: 3000,
    pagination: {
     el: '.swiper-pagination',
   },
