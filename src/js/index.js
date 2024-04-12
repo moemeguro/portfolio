@@ -69,4 +69,20 @@ const photoSwiper = new Swiper('.swiper',{
   }
 });
 
+// mvの高さをデバイス毎に調整する
+const mvArea = document.getElementById('mv')
+const mvSlide = document.getElementById('mvSlide')
+const mvImgs = mvSlide.querySelectorAll('img')
+const innerHeight = window.innerHeight
+const mvHeight = () => {
+  mvArea.style.height = innerHeight + 'px'
+  mvImgs.forEach((mvImg) => {
+    mvImg.style.height = innerHeight + 'px'
+  })
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+  // DOMContentLoaded 時に初回実行する。
+  mvHeight()
+})
 

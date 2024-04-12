@@ -14,6 +14,7 @@
   <meta property="og:image" content="https://github.com/moemeguro/portfolio/blob/main/dist/images/image.jpg">
   <link rel="icon" type="image/png" href="https://github.com/moemeguro/portfolio/blob/main/dist/images/favicon.ico">
 
+  <!-- <script src="/dist/js/index.js" defer></script> -->
   <script src="https://moemeguro.github.io/portfolio/dist/js/index.js" defer></script>
   <link rel="stylesheet" href="https://moemeguro.github.io/portfolio/dist/css/style.css">
   <!-- <link rel="stylesheet" href="/dist/css/style.css"> -->
@@ -47,22 +48,30 @@
         </ul>
       </nav>
     </header>
-    <div class="image swiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img src="https://github.com/moemeguro/portfolio/blob/main/dist/images/photo1.JPG?raw=true" alt="" width="80%">
+    <section id="mv">
+      <div id="mvSlide" class="mv__slide image swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <picture>
+              <img src="https://github.com/moemeguro/portfolio/blob/main/dist/images/photo1.JPG?raw=true" alt="" width="80%">
+            </picture>
+          </div>
+          <div class="swiper-slide">
+            <picture>
+              <img src="https://github.com/moemeguro/portfolio/blob/main/dist/images/photo2.JPG?raw=true" alt="" width="80%">
+            </picture>
+          </div>
+          <div class="swiper-slide">
+            <picture>
+              <img src="https://github.com/moemeguro/portfolio/blob/main/dist/images/photo3.JPG?raw=true" alt="" width="80%">
+            </picture>
+          </div>
         </div>
-        <div class="swiper-slide">
-          <img src="https://github.com/moemeguro/portfolio/blob/main/dist/images/photo2.JPG?raw=true" alt="" width="80%">
-        </div>
-        <div class="swiper-slide">
-          <img src="https://github.com/moemeguro/portfolio/blob/main/dist/images/photo3.JPG?raw=true" alt="" width="80%">
-        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
       </div>
-      <div class="swiper-pagination"></div>
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
-    </div>
+    </section>
 
     <section id="about" class="c-box about">
       <h1 class="c-title">ABOUT</h1>
