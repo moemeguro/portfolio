@@ -86,3 +86,24 @@ window.addEventListener('DOMContentLoaded', function () {
   mvHeight()
 })
 
+
+// 各要素が画面内に現れたら表示する
+const fadeinItems = document.querySelectorAll('.fadein');
+
+const options = {
+  threshold: 1
+};
+
+const observer = new IntersectionObserver(showElements);
+
+fadeinItems.forEach(fadeinItem => {
+  observer.observe(fadeinItem);
+});
+
+function showElements(entries){
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('active');
+    }
+  });
+};

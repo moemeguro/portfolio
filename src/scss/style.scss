@@ -273,6 +273,10 @@ body{
   padding: 10px;
 }
 
+.c-box + .c-box{
+  margin-top: 80px;
+}
+
 .c-title {
   position: relative;
   margin: 20px 0;
@@ -457,3 +461,14 @@ h2 {
   background-color: #fff;
 }
 
+.fadein{
+  opacity: 0;
+  transform: translateY(60px);
+}
+
+.active {
+  opacity: 1;
+  transition: 1.2s;
+  transform: translateY(0);
+  transition-delay: .5s;
+}
